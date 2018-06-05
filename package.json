@@ -1,12 +1,15 @@
 {
   "name": "react-infinite-dropdown",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "Small dropdown with infinite scroll",
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -41,6 +44,11 @@
     "css-loader": "^0.28.11",
     "react-virtualized": "^9.19.1",
     "style-loader": "^0.21.0",
-    "styled-components": "^3.3.0"
+    "styled-components": "^3.3.0",
+    "@storybook/react": "^3.4.6",
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-links": "^3.4.6",
+    "@storybook/addons": "^3.4.6",
+    "babel-runtime": "^6.26.0"
   }
 }

@@ -11,7 +11,10 @@ class DropDown extends Component {
       list: [],
       open: false,
       value: ""
-    }
+    };
+    this.toggleOpen = this.toggleOpen.bind(this);
+    this.onSearch = this.onSearch.bind(this);
+    this.selectItem = this.selectItem.bind(this);
   }
 
   onSearch(event){
@@ -29,6 +32,7 @@ class DropDown extends Component {
     this.setState({
       value: item
     });
+    this.props.onClick(item);
     this.toggleOpen();
   };
 
@@ -61,7 +65,8 @@ class DropDown extends Component {
 }
 
 DropDown.propTypes = {
-  list: PropTypes.array
+  list: PropTypes.array,
+  onClick: PropTypes.func
 };
 
 export default DropDown;

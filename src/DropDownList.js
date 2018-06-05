@@ -4,6 +4,11 @@ import List from 'react-virtualized/dist/es/List';
 import DropDownItem from "./DropDownItem";
 
 class DropDownList extends Component {
+  constructor() {
+    super();
+    this.click = this.click.bind(this);
+    this.rowRenderer = this.rowRenderer.bind(this);
+  }
 
   click(item ) {
     this.props.onSelect(item);

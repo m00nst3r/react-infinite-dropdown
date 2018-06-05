@@ -10,6 +10,10 @@ const Item = styled.div`
 `;
 
 class DropDownItem extends Component {
+  constructor(props) {
+    super(props);
+    this.click = this.click.bind(this);
+  }
   click(){
     this.props.onItemClick(this.props.item);
   }
