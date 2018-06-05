@@ -1,6 +1,6 @@
 {
   "name": "react-infinite-dropdown",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Small dropdown with infinite scroll",
   "main": "build/index.js",
   "scripts": {
@@ -31,10 +31,10 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "prop-types": "^15.6.1",
-    "webpack": "^2.6.1"
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
+    "webpack": "^2.6.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",

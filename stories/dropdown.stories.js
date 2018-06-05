@@ -7,6 +7,7 @@ import { action } from '@storybook/addon-actions';
 import DropDown from '../src';
 
 storiesOf('DropDown', module)
-  .add('test', () => (
+  .add('simple list', () => (
     <DropDown onClick={action('selected')} list={['1', '2', '3']}/>
-  ));
+  ))
+  .add('disabled field', () => <DropDown/>);

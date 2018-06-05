@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Input = styled.input`
+width: 100%;
+height: 30px;
+border-radius: 5px;
+`;
 
 class DropDownInput extends Component {
   render() {
@@ -8,7 +15,8 @@ class DropDownInput extends Component {
     }
     return (
       <div>
-        <input onChange={this.props.onChange} type="text"/>
+        <Input
+          onChange={this.props.onChange} type="text"/>
       </div>
     );
   }

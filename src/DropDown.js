@@ -43,6 +43,7 @@ class DropDown extends Component {
   }
 
   render() {
+    if (this.props.list && this.props.list.length === 0) return (<div/>);
     return (
       <div className="custom-drop-down">
         <DropDownInput
@@ -67,6 +68,10 @@ class DropDown extends Component {
 DropDown.propTypes = {
   list: PropTypes.array,
   onClick: PropTypes.func
+};
+
+DropDown.defaultProps = {
+  list: []
 };
 
 export default DropDown;
