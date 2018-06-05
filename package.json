@@ -1,0 +1,46 @@
+{
+  "name": "react-infinite-dropdown",
+  "version": "1.0.1",
+  "description": "Small dropdown with infinite scroll",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m00nst3r/react-infinite-dropdown.git"
+  },
+  "author": {
+    "name": "Andrii Kolisnyk",
+    "email": "scear.sic@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m00nst3r/react-infinite-dropdown/issues"
+  },
+  "homepage": "https://github.com/m00nst3r/react-infinite-dropdown#readme",
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "prop-types": "^15.6.1",
+    "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "css-loader": "^0.28.11",
+    "react-virtualized": "^9.19.1",
+    "style-loader": "^0.21.0",
+    "styled-components": "^3.3.0"
+  }
+}
