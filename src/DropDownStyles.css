@@ -6,6 +6,10 @@
     position: relative;
     cursor: pointer;
 }
+.custom-drop-down.disabled {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: not-allowed;
+}
 .custom-drop-down span {
     display: inline-block;
     font-style: normal;

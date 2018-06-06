@@ -8,15 +8,24 @@ height: 30px;
 border-radius: 5px;
 `;
 
+const Div = styled.div`
+width: 99%;
+height: 100%;
+display: block;
+
+label {
+  line-height: 35px;
+}
+`;
+
 class DropDownInput extends Component {
   render() {
     if (!this.props.open) {
-      return (<div onClick={this.props.toggleOpen}>{this.props.selectedValue}</div>)
+      return (<Div onClick={this.props.toggleOpen}><label>{this.props.selectedValue}</label></Div>)
     }
     return (
       <div>
-        <Input
-          onChange={this.props.onChange} type="text"/>
+        <Input placeholder="search" onChange={this.props.onChange} type="text"/>
       </div>
     );
   }

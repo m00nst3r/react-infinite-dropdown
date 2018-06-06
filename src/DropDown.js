@@ -18,8 +18,7 @@ class DropDown extends Component {
   }
 
   onSearch(event){
-    const list = this.props.list.filter(item => item.includes(event.target.value));
-    this.setState({list})
+    this.props.onSearch(event.target.value);
   };
 
   toggleOpen() {
@@ -29,9 +28,6 @@ class DropDown extends Component {
   };
 
   selectItem(item) {
-    this.setState({
-      value: item
-    });
     this.props.onClick(item);
     this.toggleOpen();
   };
@@ -43,7 +39,7 @@ class DropDown extends Component {
   }
 
   render() {
-    if (this.props.list && this.props.list.length === 0) return (<div/>);
+    if (this.props.list && this.props.list.length === 0) return (<div className="custom-drop-down disabled"><span/></div>);
     return (
       <div className="custom-drop-down">
         <DropDownInput
@@ -66,8 +62,9 @@ class DropDown extends Component {
 }
 
 DropDown.propTypes = {
-  list: PropTypes.array,
-  onClick: PropTypes.func
+  list: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+  onSearch: PropTypes.func
 };
 
 DropDown.defaultProps = {
